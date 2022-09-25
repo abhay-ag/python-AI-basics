@@ -126,10 +126,11 @@ print(firstArray + secondArray) # secondArray get added the each row of the firs
 import cv2 as cv
 import os
 
-file_path = "images/test.jpg"
-file_save = "images/result.jpg"
+file_path = "../images/test.jpg"
+file_save = "../images/result.jpg"
 path = os.path.abspath(file_path)
 path_save = os.path.abspath(file_save)
+print(path)
 
 img = cv.imread(path)
 print(img)
