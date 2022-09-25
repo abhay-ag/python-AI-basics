@@ -47,10 +47,11 @@ class Cell:
     
     def cell_distance(self, other_cell):
         distance = math.sqrt((self.x - other_cell.x)**2 + (self.y - other_cell.y)**2)
+        return distance
         
         
 cell1 = Cell("Cell One", 0, 0)
 cell2 = Cell("Cell Two", 5, 10)
 
-print(cell1.name)
+print(cell1.cell_distance(cell2))
     
