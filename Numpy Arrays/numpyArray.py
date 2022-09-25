@@ -120,10 +120,16 @@ print(firstArray + secondArray) # secondArray get added the each row of the firs
 #=======================#
 # reading images and maths on it
 
-# Scipy for basic image processing
+# Scipy for basic image processing ==> Doesn't Work
+# Used opencv instead
 
 import cv2 as cv
-img = cv.imread("../images/test.jpg")
-cv.imshow("Image", img)
-cv.waitKey(0)
-cv.destroyAllWindows()
+img = cv.imread("/Users/abhay/Desktop/Python_AI_ML_DL/images/test.jpg")
+print(img)
+print(img.dtype)
+print(img.shape)
+
+# adding some tint to the image
+
+img_tinted = img * np.array([0,0,1])        # converts the image to red
+cv.imwrite("/Users/abhay/Desktop/Python_AI_ML_DL/images/result.jpg", img_tinted)
