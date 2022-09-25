@@ -124,7 +124,14 @@ print(firstArray + secondArray) # secondArray get added the each row of the firs
 # Used opencv instead
 
 import cv2 as cv
-img = cv.imread("/Users/abhay/Desktop/Python_AI_ML_DL/images/test.jpg")
+import os
+
+file_path = "images/test.jpg"
+file_save = "images/result.jpg"
+path = os.path.abspath(file_path)
+path_save = os.path.abspath(file_save)
+
+img = cv.imread(path)
 print(img)
 print(img.dtype)
 print(img.shape)
@@ -132,4 +139,4 @@ print(img.shape)
 # adding some tint to the image
 
 img_tinted = img * np.array([0,0,1])        # converts the image to red
-cv.imwrite("/Users/abhay/Desktop/Python_AI_ML_DL/images/result.jpg", img_tinted)
+cv.imwrite(path_save, img_tinted)
